@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<script src="js/web-animations.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
 	<style type="text/css" media="screen">
 		* {
   box-sizing: border-box;
@@ -32,6 +32,13 @@ blockquote q {
   font-style: italic;
   letter-spacing: .1rem;
 }
+.answer{
+  font-family: Georgia, serif;
+  font-style: italic;
+  letter-spacing: .1rem;
+  font-size: 3rem;
+  position:absolute;
+}
 blockquote q span { 
   will-change: opacity, filter;
   opacity: 0;
@@ -51,14 +58,16 @@ q:before, q:after {
   color: #ccc;
   font-size: 4rem;
 }
+
+#no {
+  top:50px;
+}
+
 	</style>
 </head>
 <body>
-<a href="7" style="text-decoration:none;color: inherit;">  
-<blockquote contenteditable="false"><q>To be honest I'm a decent lucky guy with all of my weaknesses and you still accepted me as who I am. You have become a part of me that I will always cherish. I love you with all my heart and always. You have brought me so much happiness.</q>
-  <!-- <cite>Gautama Buddha</cite> -->
-</blockquote>
-</a>
+<a href="10" style="text-decoration:none;color: inherit;">  <div id="yes" class='answer'>Yes</div></a>
+<div id="no" class='answer'>No</div>
 <script type="text/javascript" charset="utf-8" async defer>
 	
 	function splitWords() {
@@ -98,6 +107,21 @@ function fadeWords(quotewords) {
    )
   })
 }
+
+document.getElementById("no").onclick=function(){
+  var x = window.innerWidth;
+  var y = window.innerHeight;
+  x-=20;
+  y-=20;
+
+  x= Math.floor(Math.random() * x)
+  y= Math.floor(Math.random() * y)
+
+  document.getElementById("no").style.left=x+"px";
+  document.getElementById("no").style.top=y+"px";
+}
+
+
 
 
 splitWords();
