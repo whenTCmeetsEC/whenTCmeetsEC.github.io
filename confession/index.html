@@ -54,6 +54,29 @@ q:before, q:after {
 	</style>
 </head>
 <body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBGJcMm3crJ4uIZVglCkfZcubUKcT5oQYA",
+    authDomain: "confession-48781.firebaseapp.com",
+    databaseURL: "https://confession-48781.firebaseio.com",
+    projectId: "confession-48781",
+    storageBucket: "confession-48781.appspot.com",
+    messagingSenderId: "503405259556",
+    appId: "1:503405259556:web:705f5fe8518a08ee17e1b1",
+    measurementId: "G-BW3Q7WK8QD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 <a href="1" style="text-decoration:none;color: inherit;">  
 <blockquote contenteditable="false"><q>Hey Elaine, if you read this then this should be 31st December 2019.</q>
   <!-- <cite>Gautama Buddha</cite> -->
